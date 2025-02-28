@@ -18,10 +18,7 @@ jobs:
           sudo apt update
           sudo apt install qemu-user-static gzip -y
           ./create_kindle_alpine_image.sh
-          mkdir compiled
-          mv alpine.ext3 alpine.conf alpine.sh compiled
-          zip compiled
-          mv compiled.zip alpine.zip
+          ./create_release.sh
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
@@ -38,7 +35,7 @@ jobs:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
         with:
-          name: alpine.ext3
+          name: alpine.zip
           path: .
 
       - name: Get current date
