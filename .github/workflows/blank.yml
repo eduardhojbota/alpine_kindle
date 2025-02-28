@@ -31,6 +31,11 @@ jobs:
           sudo apt update
           sudo apt install qemu-user-static -y
           ./create_kindle_alpine_image.sh
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.1.9
+        with:
+         name: alpine.ext3
           
       - name: Download a Build Artifact
         uses: actions/download-artifact@v4.1.9
