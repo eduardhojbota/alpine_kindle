@@ -49,4 +49,4 @@ jobs:
           gh release create "v${{ env.date }}" \
             --title "Release ${{ env.date }}" \
             --notes "This is an automated release of the latest build." \
-            alpine.ext3
+            alpine.zip
