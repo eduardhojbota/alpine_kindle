@@ -36,8 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4.6.1
         with:
          name: alpine.ext3
-          
-      - name: Download a Build Artifact
-        uses: actions/download-artifact@v4.1.9
-        with:
-         name: alpine.ext3
+         path: alpine.ext3
