@@ -5,7 +5,7 @@
 # Please install it via your package manager (e.g. Ubuntu) or whatever way is appropriate for your distribution (Arch has it in AUR)
 
 # BASIC CONFIGURATION
-REPO="https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/armv7/"
+REPO="https://dl-cdn.alpinelinux.org/alpine/"
 MNT="/mnt/alpine"
 IMAGE="./alpine.ext3"
 IMAGESIZE=2048 # Megabytes
