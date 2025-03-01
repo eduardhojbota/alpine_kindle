@@ -14,7 +14,7 @@
 #              created image/install more packages/whatever. To finish the script just leave the sh shell with "exit"
 # STARGUI: This is the script that gets executed inside the container when the GUI is started. Xepyhr is used to render the desktop
 #          inside a window, that has the correct name to be displayed in fullscreen by the kindle's awesome windowmanager
-REPO="http://dl-cdn.alpinelinux.org/alpine"
+REPO="https://dl-cdn.alpinelinux.org/alpine/v3.21/main/armv7/"
 MNT="/mnt/alpine"
 IMAGE="./alpine.ext3"
 IMAGESIZE=2048 #Megabytes
