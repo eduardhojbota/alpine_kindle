@@ -55,7 +55,7 @@ env DISPLAY=:0 Xephyr :1 -title "L:D_N:application_ID:xephyr" -ac -br -screen $S
 killall Xephyr'
 
 # ENSURE ROOT
-[ "$(whoami)" != "root" && echo "This script needs to be run as root" && exec sudo -- "$0" "$@"
+[ "$(whoami)" != "root" && echo "This script needs to be run as root" && exec sudo -- "$0" "$@" ]
 
 # GETTING APK-TOOLS-STATIC
 echo "Determining version of apk-tools-static"
