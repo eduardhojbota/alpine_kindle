@@ -17,7 +17,7 @@ apk update
 apk upgrade
 cat /etc/alpine-release
 apk add xorg-server-xephyr xwininfo xdotool xinput dbus-x11 sudo bash nano git
-apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine thunar marco gnome-themes-extra
+apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine thunar marco gnome-themes-extra xfce4-battery-plugin
 apk add xfce4
 apk add \$(apk search -q ttf- | grep -v '\-doc')
 apk add onboard chromium
