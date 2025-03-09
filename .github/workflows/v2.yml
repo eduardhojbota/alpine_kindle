@@ -1,4 +1,4 @@
-name: CI
+name: CI2
 
 on:
   push:
@@ -17,6 +17,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt install qemu-user-static gzip -y
+          chmod +x createv2.sh
+          chmod +x create_release.sh
           ./createv2.sh
           ./create_release.sh
 
