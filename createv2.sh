@@ -27,7 +27,7 @@ apk upgrade
 cat /etc/alpine-release
 apk add xorg-server-xephyr xwininfo xdotool xinput dbus-x11 sudo bash nano git
 apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine marco gnome-themes-extra
-apk add xfce4 xfce4-terminal
+apk add lxqt xfce4-terminal
 apk add \$(apk search -q ttf- | grep -v '\-doc')
 apk add onboard chromium
 adduser alpine -D
