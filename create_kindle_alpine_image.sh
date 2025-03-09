@@ -8,7 +8,7 @@
 REPO="https://dl-cdn.alpinelinux.org/alpine/"
 MNT="/mnt/alpine"
 IMAGE="./alpine.ext3"
-IMAGESIZE=1748 # Megabytes
+IMAGESIZE=2048 # Megabytes
 ALPINESETUP="source /etc/profile
 echo kindle > /etc/hostname
 echo \"nameserver 8.8.8.8\" > /etc/resolv.conf
@@ -17,7 +17,7 @@ apk update
 apk upgrade
 cat /etc/alpine-release
 apk add xorg-server-xephyr xwininfo xdotool xinput dbus-x11 sudo bash nano git
-apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine thunar marco gnome-themes-extra xfce4-battery-plugin xfce4-terminal
+apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine thunar marco gnome-themes-extra
 apk add xfce4
 apk add \$(apk search -q ttf- | grep -v '\-doc')
 apk add onboard chromium
