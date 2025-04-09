@@ -41,8 +41,8 @@ git init
 git remote add origin https://github.com/schuhumi/alpine_kindle_dotfiles
 git pull origin master
 git reset --hard origin/master
-dconf load /org/mate/ < ~/.config/org_mate.dconf.dump
-dconf load /org/onboard/ < ~/.config/org_onboard.dconf.dump\"
+dbus-launch dconf load /org/mate/ < ~/.config/org_mate.dconf.dump
+dbus-launch dconf load /org/onboard/ < ~/.config/org_onboard.dconf.dump\"
 
 echo '# Default settings for chromium. This file is sourced by /bin/sh from
 # the chromium launcher.
