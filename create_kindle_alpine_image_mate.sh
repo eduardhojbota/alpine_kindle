@@ -61,7 +61,6 @@ echo '{
 
 echo \"You're now dropped into an interactive shell in Alpine, feel free to explore and type exit to leave.\"
 sh"
-
 STARTGUI='#!/bin/sh
 chmod a+w /dev/shm # Otherwise the alpine user cannot use this (needed for chromium)
 SIZE=$(xwininfo -root -display :0 | egrep "geometry" | cut -d " "  -f4)
