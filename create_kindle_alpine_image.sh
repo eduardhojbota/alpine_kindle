@@ -27,9 +27,9 @@ apk update
 apk upgrade
 cat /etc/alpine-release
 apk add xorg-server-xephyr xwininfo xdotool xinput dbus-x11 sudo bash nano git
-apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco gnome-themes-extra
-apk add \$(apk search mate -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
-apk add \$(apk search -q ttf- | grep -v '\-doc')
+apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine
+apk add lxqt openbox pcmanfm lxterminal
+apk add ttf-dejavu ttf-freefont font-noto
 apk add onboard chromium
 adduser alpine -D
 echo -e \"alpine\nalpine\" | passwd alpine
@@ -59,7 +59,7 @@ sh"
 STARTGUI='#!/bin/sh
 chmod a+w /dev/shm # Otherwise the alpine user cannot use this (needed for chromium)
 SIZE=$(xwininfo -root -display :0 | egrep "geometry" | cut -d " "  -f4)
-env DISPLAY=:0 Xephyr :1 -title "L:D_N:application_ID:xephyr" -ac -br -screen $SIZE -cc 4 -reset -terminate & sleep 3 && su alpine -c "env DISPLAY=:1 mate-session"
+env DISPLAY=:0 Xephyr :1 -title "L:D_N:application_ID:xephyr" -ac -br -screen $SIZE -cc 4 -reset -terminate & sleep 3 && su alpine -c "env DISPLAY=:1 startlxqt"
 killall Xephyr'
 
 
