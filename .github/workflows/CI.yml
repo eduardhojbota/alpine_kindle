@@ -16,8 +16,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt update
-          sudo apt install qemu-user-static gzip -y
-          ./create_kindle_alpine_image_mate.sh
+          sudo apt install qemu-user-static -y
+          ./create_kindle_alpine_image.sh
           ./create_release.sh
 
       - name: Upload a Build Artifact
